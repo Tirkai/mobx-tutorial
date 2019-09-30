@@ -1,5 +1,9 @@
 import IVacancyItem from "./IVacancyItem";
 
-export default interface IVacanciesResponse{
+interface IReponse{
+    error: string;
+}
+
+export default interface IVacanciesResponse extends IReponse{
     items: Array<IVacancyItem>
 }

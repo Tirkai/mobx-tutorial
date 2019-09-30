@@ -11,7 +11,7 @@ export default class Vacancy {
         if(options.salary != null){
             if(options.salary.from != null){
                 this.salary = options.salary.from;
-            }
+            }   
         }
     }
 }
