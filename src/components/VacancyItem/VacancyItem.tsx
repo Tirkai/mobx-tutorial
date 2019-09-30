@@ -23,7 +23,7 @@ export default class VacancyItem extends Component<IVacancyItemProps> {
                 </div>
                 <div className={style.actions}>
                     <div className={style.action}>
-                        {this.props.controls && this.props.controls}
+                        {this.props.controls}
                     </div>
                 </div>
             </div>

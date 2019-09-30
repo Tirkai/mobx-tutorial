@@ -37,7 +37,9 @@ export default class VacanciesList extends Component<IVacanciesListProps> {
     }
 
     render() {
-        console.log(this.props)
+        console.log(this.props);
+
+
         return (
             <div className={style.vacanciesList}>
                 <VacanciesColumn>
@@ -46,7 +48,10 @@ export default class VacanciesList extends Component<IVacanciesListProps> {
                             vacancy={vacancy}
                             controls={
                                 <React.Fragment>
-                                    <Button type="primary" onClick={() => this.handleAddFavorite(vacancy)}>
+                                    <Button
+                                        type="primary"
+                                        onClick={() => this.handleAddFavorite(vacancy)}
+                                    >
                                         В избранное
                                     </Button>
                                 </React.Fragment>
@@ -68,7 +73,12 @@ export default class VacanciesList extends Component<IVacanciesListProps> {
                     ))}
                 </VacanciesColumn>
                 <VacanciesColumn>
-                    <span>Stand by</span>
+                    {this.favoritesStore.eliteVacancies.map((vacancy: Vacancy) => (
+                        <VacancyItem
+                            vacancy={vacancy}
+                            controls={null}
+                        />
+                    ))}
                 </VacanciesColumn>
             </div>
         )

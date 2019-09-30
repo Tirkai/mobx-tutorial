@@ -8,6 +8,7 @@ export default class FavoritesStore {
 
     @action
     addFavorite(vacancy: Vacancy) {
+        if(this.items.find((item: Vacancy) => item == vacancy)) return false;
         this.items.push(vacancy);
     }
 
@@ -15,5 +16,11 @@ export default class FavoritesStore {
     removeFavorite(vacancy: Vacancy){
         this.items.splice(this.items.indexOf(vacancy), 1)
     }
+    
+    @computed
+    get eliteVacancies(){
+        return this.items.filter((item: Vacancy) => item.salary > 60000);
+    }
+
 
 }
