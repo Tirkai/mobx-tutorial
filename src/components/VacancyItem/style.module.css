@@ -1,0 +1,21 @@
+.vacancyItem{
+    padding: 10px;
+    border-bottom: 1px solid #e2e2e2;
+    background: #ffffff;
+    box-shadow: 0 2px rgba(0,0,0,0.15);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+}
+.salary{
+    color: #27ae60;
+}
+.actions{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    padding-top: 5px;
+}

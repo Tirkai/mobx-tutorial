@@ -1,0 +1,8 @@
+.paper{
+    background: #e2e2e2;
+    border-radius: 4px;
+}
+.container{
+    max-height: 85vh;
+    overflow-y: auto;
+}
