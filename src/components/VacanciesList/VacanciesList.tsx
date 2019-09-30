@@ -30,10 +30,12 @@ export default class VacanciesList extends Component<IVacanciesListProps> {
 
     handleAddFavorite = (vacancy: Vacancy) => {
         this.favoritesStore.addFavorite(vacancy);
+        vacancy.setFavorite(true);
     }
 
     handleRemoveFavorite = (vacancy: Vacancy) => {
         this.favoritesStore.removeFavorite(vacancy);
+        vacancy.setFavorite(false);
     }
 
     render() {
@@ -51,6 +53,7 @@ export default class VacanciesList extends Component<IVacanciesListProps> {
                                     <Button
                                         type="primary"
                                         onClick={() => this.handleAddFavorite(vacancy)}
+                                        disabled={vacancy.isFavorite}
                                     >
                                         В избранное
                                     </Button>
